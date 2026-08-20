@@ -1,0 +1,35 @@
+# Python Bytecode and Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Data and Artifacts
+storage/*.db
+storage/reports/*
+!storage/reports/.gitkeep
+reports/*
+!reports/.gitkeep
+*.log
+
+# Environment & Secrets
+.env
+.env.local
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating System Files
+.DS_Store
+Thumbs.db

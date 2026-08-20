@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenrir FTS5 Intelligence Portal • AIwolfie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #030712; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .cyber-glow { box-shadow: 0 0 25px rgba(0, 245, 212, 0.15); }
+        .cyber-glow-hover:hover { box-shadow: 0 0 20px rgba(0, 245, 212, 0.35); }
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen antialiased selection:bg-cyan-500 selection:text-black">
+    <div class="max-w-5xl mx-auto px-4 py-10">
+        <!-- Top Nav -->
+        <header class="mb-10 border-b border-gray-800/80 pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg shadow-inner">
+                    <i class="fa-solid fa-crosshairs"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">
+                        Fenrir FTS5 Intelligence Search
+                    </h1>
+                    <p class="text-xs text-gray-400 font-mono">SQLite BM25 Sub-Millisecond Retrieval • <span class="text-emerald-400 font-semibold">AIwolfie</span> Threat Ops</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="px-3 py-1.5 rounded-md bg-gray-900 border border-gray-800 text-xs mono text-gray-400 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Tor Circuit: <strong class="text-emerald-400">{{ tor_ip }}</strong></span>
+                </div>
+                <a href="/" class="px-3 py-1.5 rounded-md bg-gray-900 border border-gray-800 hover:border-cyan-500 text-cyan-400 hover:text-cyan-300 text-xs font-semibold mono flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-arrow-left"></i> Console
+                </a>
+            </div>
+        </header>
+
+        <!-- Search Bar Form -->
+        <div class="bg-gray-900/80 backdrop-blur-md border border-gray-800 p-6 rounded-2xl cyber-glow mb-8">
+            <form action="/search" method="get" class="flex flex-col sm:flex-row gap-3">
+                <div class="relative flex-grow">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <input 
+                        type="text" 
+                        name="q" 
+                        value="{{ query }}" 
+                        placeholder="Search keywords, BTC addresses, emails, onion services..." 
+                        class="w-full bg-gray-950/80 border border-gray-700/80 rounded-xl pl-11 pr-4 py-3.5 text-white focus:outline-none focus:border-cyan-400 mono placeholder-gray-500 transition duration-150 text-sm shadow-inner"
+                        autofocus
+                    >
+                </div>
+                <button type="submit" class="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-gray-950 font-bold py-3.5 px-8 rounded-xl transition duration-200 shadow-lg flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-solid fa-bolt"></i> Run BM25 Query
+                </button>
+            </form>
+
+            <!-- Quick Filter Badges -->
+            <div class="mt-4 pt-4 border-t border-gray-800/80 flex flex-wrap items-center gap-2 text-xs">
+                <span class="text-gray-500 mono font-semibold">Quick Filters:</span>
+                <a href="/search?q=.onion" class="px-2.5 py-1 rounded bg-gray-950 border border-gray-800 text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 mono transition">🧅 .onion</a>
+                <a href="/search?q=bitcoin" class="px-2.5 py-1 rounded bg-gray-950 border border-gray-800 text-gray-400 hover:text-amber-400 hover:border-amber-500/50 mono transition">💰 Bitcoin</a>
+                <a href="/search?q=@" class="px-2.5 py-1 rounded bg-gray-950 border border-gray-800 text-gray-400 hover:text-blue-400 hover:border-blue-500/50 mono transition">📧 Emails</a>
+                <a href="/search?q=PGP" class="px-2.5 py-1 rounded bg-gray-950 border border-gray-800 text-gray-400 hover:text-purple-400 hover:border-purple-500/50 mono transition">🔑 PGP Keys</a>
+            </div>
+        </div>
+
+        <!-- Results View -->
+        {% if query %}
+            <div class="mb-6 flex justify-between items-center text-xs text-gray-400 mono">
+                <p>Intelligence Engine found <span class="text-cyan-400 font-bold text-sm">{{ results|length }}</span> matching nodes for "<span class="text-white font-medium">{{ query }}</span>"</p>
+                <span>FTS5 BM25 Engine Active</span>
+            </div>
+            
+            <div class="space-y-4">
+                {% for row in results %}
+                <div class="bg-gray-900/70 backdrop-blur-md border border-gray-800 hover:border-cyan-500/40 p-6 rounded-2xl transition duration-200 shadow-xl group">
+                    <div class="flex items-start justify-between gap-4">
+                        <h3 class="text-base font-bold text-cyan-300 group-hover:text-cyan-200 transition">
+                            {{ row.title or "Untitled Tor Hidden Service" }}
+                        </h3>
+                        <span class="mono text-xs px-2.5 py-1 rounded-md bg-gray-950 text-cyan-400 border border-gray-800 font-semibold">
+                            Rank: {{ row.relevance_score|round(2) }}
+                        </span>
+                    </div>
+
+                    <a href="{{ row.url }}" target="_blank" class="text-xs mono text-teal-400 hover:text-teal-300 hover:underline break-all my-2 inline-flex items-center gap-1.5">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> {{ row.url }}
+                    </a>
+
+                    {% if row.content %}
+                    <div class="text-xs text-gray-300 line-clamp-3 mt-3 bg-gray-950/80 p-3.5 rounded-xl border border-gray-850 font-mono leading-relaxed selection:bg-cyan-600">
+                        {{ row.content[:320] }}...
+                    </div>
+                    {% endif %}
+
+                    <div class="flex items-center justify-between text-xs text-gray-400 mt-4 pt-3 border-t border-gray-800/60">
+                        <div class="flex items-center gap-4">
+                            {% if row.language %}
+                            <span class="mono flex items-center gap-1.5"><i class="fa-solid fa-globe text-cyan-400"></i> Lang: <span class="text-gray-200">{{ row.language }}</span></span>
+                            {% endif %}
+                            <span class="mono flex items-center gap-1.5"><i class="fa-solid fa-calendar text-gray-500"></i> {{ row.created_at[:10] if row.created_at else "Recently" }}</span>
+                        </div>
+                        <button onclick="navigator.clipboard.writeText('{{ row.url }}'); this.innerText='Copied URL!'" class="text-[11px] mono text-gray-500 hover:text-cyan-400 transition">
+                            <i class="fa-regular fa-copy"></i> Copy Target
+                        </button>
+                    </div>
+                </div>
+                {% else %}
+                <div class="bg-gray-900/60 border border-gray-800/80 rounded-2xl p-14 text-center text-gray-400">
+                    <div class="w-12 h-12 rounded-full bg-gray-800/80 mx-auto flex items-center justify-center text-gray-500 text-lg mb-4">
+                        <i class="fa-solid fa-filter-circle-xmark"></i>
+                    </div>
+                    <p class="text-base font-semibold text-gray-200">No matching records found in local SQLite database.</p>
+                    <p class="text-xs mt-2 text-gray-500">Try broader keywords or execute a live crawler scan from the main console.</p>
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

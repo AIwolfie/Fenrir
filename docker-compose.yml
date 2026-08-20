@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  fenrir:
+    build: .
+    container_name: fenrir_engine
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./storage:/app/storage
+      - ./reports:/app/reports
+      - ./.env:/app/.env
+    restart: unless-stopped
+    environment:
+      # Use an LLM on the docker host (Ollama defaults here)
+      - OLLAMA_MODEL=llama3
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
