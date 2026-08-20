@@ -18,12 +18,16 @@
 ### *Next-Gen Autonomous Dark Web Reconnaissance, SOCKS5 Multiplexing & Multi-LLM Threat Triage*
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Framework-Fenrir%20OSINT-00f5d4.svg?style=for-the-badge&logo=wolfram&logoColor=black" alt="Fenrir Framework">
-  <img src="https://img.shields.io/badge/Author-AIwolfie-a855f7.svg?style=for-the-badge&logo=github&logoColor=white" alt="Author AIwolfie">
-  <img src="https://img.shields.io/badge/Network-Tor%20SOCKS5-7D4698.svg?style=for-the-badge&logo=tor-browser&logoColor=white" alt="Tor Network">
-  <img src="https://img.shields.io/badge/AI-Ollama%20%7C%20Gemini%20%7C%20GPT4-ec4899.svg?style=for-the-badge&logo=openai&logoColor=white" alt="AI Engine">
-  <img src="https://img.shields.io/badge/Storage-SQLite%20FTS5-38bdf8.svg?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite FTS5">
-  <img src="https://img.shields.io/badge/License-MIT-f59e0b.svg?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License">
+  <a href="https://github.com/AIwolfie/Fenrir/stargazers"><img src="https://img.shields.io/badge/Stars-⭐%20Rate%20Repo-00f5d4?style=for-the-badge&logo=github&logoColor=black" alt="GitHub Stars"></a>
+  <a href="https://github.com/AIwolfie/Fenrir/network/members"><img src="https://img.shields.io/badge/Forks-🍴%20Fork%20Repo-38bdf8?style=for-the-badge&logo=git&logoColor=white" alt="GitHub Forks"></a>
+  <a href="https://github.com/AIwolfie/Fenrir/issues"><img src="https://img.shields.io/badge/Issues-🐛%20Active-a855f7?style=for-the-badge&logo=github&logoColor=white" alt="Issues"></a>
+  <a href="https://github.com/AIwolfie/Fenrir/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-f59e0b.svg?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License"></a>
+</p>
+<p align="center">
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-3776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python Version"></a>
+  <a href="https://www.torproject.org/"><img src="https://img.shields.io/badge/Tor-SOCKS5%20v3-7D4698.svg?style=for-the-badge&logo=tor-browser&logoColor=white" alt="Tor Network"></a>
+  <a href="https://ollama.ai/"><img src="https://img.shields.io/badge/AI-Ollama%20%2B%20Gemini%20%2B%20GPT4o-ec4899.svg?style=for-the-badge&logo=openai&logoColor=white" alt="AI Engine"></a>
+  <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-Ready-2496ED.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"></a>
 </p>
 
 <p align="center">
@@ -228,20 +232,6 @@ Fenrir reads configuration from `.env` or system environment variables:
 | `OPENAI_API_KEY` | `""` | OpenAI API Key |
 | `ANTHROPIC_API_KEY`| `""` | Anthropic API Key |
 | `ENABLE_PDF_EXPORT`| `false` | Enable automatic WeasyPrint PDF report rendering |
-
----
-
-## 🧪 Automated Testing
-
-Verify all internal extractors, databases, and async routines:
-
-```bash
-pytest -v
-```
-
-```text
-============================= 23 passed in 11.85s =============================
-```
 
 ---
 
