@@ -1,114 +1,107 @@
 <div align="center">
 
-# 🐺 Fenrir
-### *Autonomous Dark Web OSINT & AI Threat Intelligence Engine*
+```
+               __.....__        _..._           .--.         
+     _.._  .-''         '.    .'     '.         |__|         
+   .' .._|/     .-''"'-.  `. .   .-.   ..-,.--. .--..-,.--.  
+   | '   /     /________\   \|  '   '  ||  .-. ||  ||  .-. | 
+ __| |__ |                  ||  |   |  || |  | ||  || |  | | 
+|__   __|\    .-------------'|  |   |  || |  | ||  || |  | | 
+   | |    \    '-.____...---.|  |   |  || |  '- |  || |  '-  
+   | |     `.             .' |  |   |  || |     |__|| |      
+   | |       `''-...... -'   |  |   |  || |         | |      
+   | |                       |  |   |  ||_|         |_|      
+   |_|                       '--'   '--'                     
+```
+
+# 🐺 FENRIR
+### *Next-Gen Autonomous Dark Web Reconnaissance, SOCKS5 Multiplexing & Multi-LLM Threat Triage*
 
 <p align="center">
-  <a href="https://github.com/AIwolfie/Fenrir/stargazers"><img src="https://img.shields.io/github/stars/AIwolfie/Fenrir?style=for-the-badge&logo=starship&color=00f5d4&logoColor=black" alt="GitHub Stars"></a>
-  <a href="https://github.com/AIwolfie/Fenrir/network/members"><img src="https://img.shields.io/github/forks/AIwolfie/Fenrir?style=for-the-badge&logo=git&color=38bdf8&logoColor=white" alt="GitHub Forks"></a>
-  <a href="https://github.com/AIwolfie/Fenrir/issues"><img src="https://img.shields.io/github/issues/AIwolfie/Fenrir?style=for-the-badge&logo=github&color=a855f7&logoColor=white" alt="Issues"></a>
-  <a href="https://github.com/AIwolfie/Fenrir/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-f59e0b.svg?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License"></a>
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-3776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python Version"></a>
-  <a href="https://www.torproject.org/"><img src="https://img.shields.io/badge/Tor-SOCKS5%20v3-7D4698.svg?style=for-the-badge&logo=tor-browser&logoColor=white" alt="Tor Network"></a>
-  <a href="https://ollama.ai/"><img src="https://img.shields.io/badge/AI-Ollama%20%2B%20Gemini%20%2B%20GPT4o-ec4899.svg?style=for-the-badge&logo=openai&logoColor=white" alt="AI Engine"></a>
-  <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-Ready-2496ED.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"></a>
+  <img src="https://img.shields.io/badge/Framework-Fenrir%20OSINT-00f5d4.svg?style=for-the-badge&logo=wolfram&logoColor=black" alt="Fenrir Framework">
+  <img src="https://img.shields.io/badge/Author-AIwolfie-a855f7.svg?style=for-the-badge&logo=github&logoColor=white" alt="Author AIwolfie">
+  <img src="https://img.shields.io/badge/Network-Tor%20SOCKS5-7D4698.svg?style=for-the-badge&logo=tor-browser&logoColor=white" alt="Tor Network">
+  <img src="https://img.shields.io/badge/AI-Ollama%20%7C%20Gemini%20%7C%20GPT4-ec4899.svg?style=for-the-badge&logo=openai&logoColor=white" alt="AI Engine">
+  <img src="https://img.shields.io/badge/Storage-SQLite%20FTS5-38bdf8.svg?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite FTS5">
+  <img src="https://img.shields.io/badge/License-MIT-f59e0b.svg?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License">
 </p>
 
 <p align="center">
-  <b>The most aesthetic, high-velocity, and decoupled Dark Web intelligence engine on GitHub.</b><br>
-  Engineered with asynchronous SOCKS5 swarms, multi-provider LLM threat contextualization, SQLite FTS5 search indexes, and modular regex extractors.
+  <b>An elite, modular intelligence platform designed for defensive cyber threat investigations, cryptocurrency tracing, and hidden service mapping across the encrypted web.</b>
 </p>
 
 <p align="center">
-  <a href="#-capabilities-radar">Capabilities</a> •
-  <a href="#-key-features">Features</a> •
-  <a href="#-benchmarks">Benchmarks</a> •
-  <a href="#-dark-web-meta-search">Meta-Search</a> •
-  <a href="#-pipeline-architecture">Architecture</a> •
-  <a href="#-quickstart">Quickstart</a> •
+  <a href="#-overview">Overview</a> •
+  <a href="#-core-capabilities">Capabilities</a> •
+  <a href="#-architecture--workflow">Architecture</a> •
+  <a href="#-quickstart-installation">Installation</a> •
   <a href="#-usage-guide">Usage</a> •
-  <a href="#-disclaimer">Disclaimer</a>
+  <a href="#-configuration">Configuration</a> •
+  <a href="#-opsec--disclaimer">OPSEC</a>
 </p>
 
 </div>
 
 ---
 
-## 🎯 Capabilities Radar
+## ⚡ Overview
 
-<div align="center">
-  <img src="https://quickchart.io/chart/render/zf-d83ff8b6-18e4-4b11-b1d5-e0341a795040" alt="Fenrir Capability Radar Chart" width="750">
-</div>
+**Fenrir** is an autonomous intelligence gathering engine designed to illuminate dark web infrastructures. Named after the mythical wolf of unyielding strength, Fenrir sweeps hidden services (`.onion`), harvests critical forensic artifacts, indexes contents using high-speed BM25 search, and leverages local or cloud LLMs to synthesize automated threat dossiers.
 
 ---
 
-## ✨ Key Features (Main Character Energy)
-
-| Vector | Feature | Description |
-| :--- | :--- | :--- |
-| 🧠 **AI Intelligence** | **Multi-LLM Threat Triage** | Integrated with **Ollama (Llama 3)**, **Google Gemini**, **OpenAI (GPT-4o)**, **Anthropic (Claude 3.5)** & **OpenRouter**. Provides deterministic offline heuristic fallbacks when offline. |
-| 🧅 **Dark Web Spider** | **Asynchronous Meta-Search** | Concurrently scans **11+ Dark Web search engines** (Ahmia, OnionLand, Torch, Kaizer, Amnesia, etc.) to discover hidden services prior to crawling. |
-| ⚡ **Extreme Velocity** | **Async SOCKS5 Swarm** | Built on top of `aiohttp` + `aiohttp-socks` with rate-limiting, circuit renewal, non-blocking coroutines, and automated backoff. |
-| 💰 **Artifact Harvester** | **Crypto & PGP Extraction** | Pluggable regex extractors harvest Bitcoin (`bc1`, legacy), Ethereum (`0x`), Monero (`4/8`), PGP public keys, emails, and phone numbers. |
-| 🛠️ **Tech Fingerprinter** | **Stack Identification** | Detects 25+ web frameworks and servers: React, Next.js, Vue, Nuxt, FastAPI, Flask, Django, Express, WordPress, Nginx, TailwindCSS, etc. |
-| 🔍 **Search Engine** | **SQLite FTS5 Full-Text** | Blazing-fast BM25 full-text search indexing across millions of scraped pages with sub-millisecond retrieval. |
-| 📊 **Cyber Reports** | **Dark Cyberpunk Exports** | Automatically generates high-aesthetic HTML, JSON, and PDF forensic intelligence dossiers with copyable artifact badges. |
-| 🌐 **Modern Interfaces** | **FastAPI Dashboard + CLI** | Switch effortlessly between a reactive web dashboard with live stats and an elite `rich`-powered interactive terminal console. |
-
----
-
-## 📈 Benchmarks
-
-How does Fenrir stack up against traditional crawlers? Fenrir utilizes asynchronous I/O and non-blocking SOCKS5 multiplexing to yield up to **10x higher node discovery throughput**:
-
-<div align="center">
-  <img src="https://quickchart.io/chart/render/zf-5454db70-02f8-419c-a231-3033794185d2" alt="Benchmark Speed Chart" width="750">
-</div>
-
----
-
-## 🧅 Dark Web Meta-Search Engine Network
-
-Fenrir queries multiple curated onion search indexes concurrently to identify live services across disparate networks:
-
-<div align="center">
-  <img src="https://quickchart.io/chart/render/zf-9beb9cbe-85d7-479a-8ed3-337a2a65fbb6" alt="Search Engines Coverage Chart" width="750">
-</div>
-
----
-
-## 🏗️ Pipeline Architecture & Latency
-
-Each scanned onion node passes through a sub-millisecond decoupled intelligence pipeline:
-
-<div align="center">
-  <img src="https://quickchart.io/chart/render/zf-8b7b877c-ee3b-48d6-9ba7-040aaeb88898" alt="Pipeline Latency Chart" width="750">
-</div>
-
-
-### Codebase Organization
+## 🚀 Core Capabilities
 
 ```
-Fenrir/
-├── core/                  # Engine Core: SOCKS5 Async Crawler, AI Triage, Search Engines, Parser, Reporter
-│   ├── ai_analyzer.py     # Multi-LLM provider router (Ollama, Gemini, OpenAI, Anthropic, Heuristics)
-│   ├── crawler.py         # Async BFS crawler with rate-limiting & duplicate avoidance
-│   ├── parser.py          # HTML/LXML AST entity extractor & form parser
-│   ├── reporter.py        # Dark-mode Cyberpunk HTML, JSON, and PDF report builder
-│   ├── search_engines.py  # 11-Engine async Dark Web meta-search dispatcher
-│   └── searcher.py        # Regex & keyword intelligence scoring engine
-├── plugins/               # Extensible plugin system (Drop any Python plugin here)
-│   ├── crypto_detector.py # BTC (bc1/legacy), ETH, and Monero (XMR) sniffer
-│   ├── email_extractor.py # Email regex pattern harvester
-│   ├── fingerprinter.py   # 25+ Web server, JS framework & CMS tech identifier
-│   ├── language_detector.py # NLP natural language identification
-│   └── pgp_harvester.py   # PGP ASCII Armor public key block extractor
-├── storage/               # Persistence Layer: SQLite FTS5 Full-Text Search
-│   ├── db.py              # Schema migration, BM25 text search, link graphs, relational tables
-│   └── models.py          # Dataclass entities (Site, Page, Link, KeywordHit, Session, Report)
-├── utils/                 # Utilities: Tor manager, OPSEC, Rate-limiter, Banner, Logger, Validator
-├── web/                   # Reactive FastAPI Web UI with Tailwind dark theme
-└── tests/                 # Comprehensive pytest test suite (100% passing)
+                  ┌─────────────────────────────────────────────────────────┐
+                  │                 🐺 FENRIR CORE SUITE                    │
+                  └────────────────────────────┬────────────────────────────┘
+                                               │
+      ┌────────────────────┬───────────────────┼───────────────────┬────────────────────┐
+      ▼                    ▼                   ▼                   ▼                    ▼
+[ 🧅 Meta-Search ]  [ ⚡ Async Swarm ]  [ 💰 Harvester ]   [ 🔍 FTS5 Engine ]   [ 🤖 Multi-LLM ]
+Concurrently scans   Non-blocking SOCKS5  Extracts BTC, ETH, Sub-millisecond      Auto-generates
+11+ Onion Search     BFS crawler with     Monero, Emails &   full-text search     threat dossiers
+Engines in parallel  circuit rotation     PGP armor blocks   across stored nodes  via Ollama/Gemini
+```
+
+### 💎 Tactical Features Matrix
+
+| Module | Operational Vector | Description |
+| :--- | :--- | :--- |
+| 🧅 **Dark Discovery** | **Multi-Index Meta-Search** | Concurrently queries 11+ Dark Web search engines (Ahmia, Torch, Kaizer, Amnesia, etc.) to discover active `.onion` hosts before crawling. |
+| ⚡ **Async Spider** | **SOCKS5 Swarm Multiplexing** | Built on non-blocking `aiohttp` + `aiohttp-socks` with dynamic rate-limiting, traversal depth controls, and transient Tor drop recovery. |
+| 💰 **Forensic Harvester**| **Multi-Asset Extraction** | Specialized regex engines sniff Bitcoin (`bc1` & legacy), Ethereum (`0x`), Monero (`4/8`), PGP public keys, emails, and phone numbers. |
+| 🛠️ **Tech Profiler** | **Stack Identification** | Fingerprints 25+ technologies including Nginx, Apache, FastAPI, Django, Flask, Express, React, Next.js, WordPress, and TailwindCSS. |
+| 🔍 **Search Engine** | **SQLite FTS5 Full-Text** | Blazing-fast BM25 full-text search indexing across millions of scraped pages with sub-millisecond retrieval. |
+| 🤖 **Threat Triage** | **Multi-LLM Synthesis** | Summarizes crawled targets using **Ollama (Llama 3)**, **Google Gemini**, **OpenAI (GPT-4o)**, or deterministic offline heuristics. |
+| 📊 **Cyber Dossiers** | **Forensic Dossier Exports** | Builds high-aesthetic dark cyberpunk dossiers in HTML, JSON, and optional PDF formats. |
+| 🌐 **Modern Command** | **FastAPI HUD + CLI Wizard** | Switch seamlessly between an obsidian-cyan web dashboard and an interactive terminal mission control. |
+
+---
+
+## 🏗️ Architecture & Workflow
+
+```
+[ Target Input / Search Query ]
+              │
+              ▼
+[ Tor SOCKS5 Layer (socks5h://127.0.0.1:9050) ] ──▶ Remote DNS Resolution & NEWNYM Circuit Rotation
+              │
+              ▼
+[ Async Crawler Engine (core/crawler.py) ]     ──▶ BFS Depth Traversal & Throttled Workers
+              │
+              ▼
+[ Modular Plugins Pipeline (plugins/) ]        ──▶ Crypto, Emails, PGP, Tech Stack, NLP Language
+              │
+              ▼
+[ Persistence Engine (storage/db.py) ]         ──▶ SQLite FTS5 Full-Text Indexing (storage/fenrir.db)
+              │
+              ▼
+[ Multi-LLM Threat Analyzer (core/ai_analyzer.py) ] ──▶ Automated Threat Dossier Synthesis
+              │
+              ▼
+[ Output Layer ]                               ──▶ Web UI Dashboard / Interactive CLI / Cyberpunk Reports
 ```
 
 ---
@@ -128,55 +121,31 @@ Fenrir/
    | |                       |  |   |  ||_|         |_|      
    |_|                       '--'   '--'                     
 
- 🐺 Autonomous Dark Web OSINT & Intelligence Framework (v3.2.0)
+ 🐺 Fenrir OSINT Intelligence Console (v3.2.0)
 
  ╭─────────────────────── 🚀 Active Environment ───────────────────────╮
- │ 🐺  Fenrir OSINT Intelligence Console                                │
- │ 🧅  Tor Exit IP: 185.220.101.5 (Secure Tor Circuit)                  │
- │ 💾  Database: storage/fenrir.db                                       │
- │ 🤖  AI Provider: OLLAMA (Llama3)                                      │
+ │ 🐺  Mission Control: Fenrir Threat Operations                        │
+ │ 🧅  Tor Exit IP: 185.220.101.5 (Encrypted SOCKS5 Circuit)            │
+ │ 💾  Storage Database: storage/fenrir.db                              │
+ │ 🤖  AI Engine: Ollama (Llama 3) / Google Gemini                      │
  ╰──────────────────────────────────────────────────────────────────────╯
 
- 1  Crawl direct target (.onion or clearnet)
- 2  Global Dark Web Meta-Search (11 Search Engines)
- 3  Search stored pages locally (FTS5 BM25 Engine)
- 4  Generate AI Threat Analysis on Session
- 5  Renew Tor IP (NEWNYM Signal)
- 6  Generate session report (HTML / JSON / PDF)
- 7  List sessions
- 8  Exit
+ 1  🎯 Interactive Recon Mission (Guided Crawler)
+ 2  🧅 Dark Web Meta-Search Infiltration (11 Engines)
+ 3  📦 Batch Multi-Target Recon
+ 4  🤖 AI Threat Intelligence Analysis
+ 5  🔍 SQLite FTS5 Local Search (BM25 Index)
+ 6  📊 Generate Forensic Dossier Report (HTML/JSON/PDF)
+ 7  🔄 Rotate Tor Identity (NEWNYM Signal)
+ 8  🌐 Launch Modern Web UI Dashboard
+ 9  🚪 Exit Console
 ```
 
 ---
 
-## 🚀 Quickstart
+## 🚀 Quickstart & Installation
 
-### Option 1: Docker Compose [Zero Setup - Recommended]
-
-Spin up the entire Fenrir stack with isolated networking and persistence:
-
-```bash
-docker-compose up --build -d
-```
-> Open `http://localhost:8000` in your browser to access the Web UI.
-
----
-
-### Option 2: Linux / Debian / Kali Linux
-
-```bash
-# Clone the repository
-git clone https://github.com/AIwolfie/Fenrir.git
-cd Fenrir
-
-# Run the automated installer
-chmod +x install.sh
-./install.sh
-```
-
----
-
-### Option 3: Windows (PowerShell / CMD)
+### Option 1: Windows (Automated Setup)
 
 ```cmd
 git clone https://github.com/AIwolfie/Fenrir.git
@@ -185,36 +154,65 @@ install.bat
 ```
 
 > [!TIP]
-> **Windows Tor Daemon:** Ensure the [Tor Expert Bundle](https://www.torproject.org/download/tor/) is running on port `9050` (`tor.exe`).
+> **Windows Tor Daemon:** Ensure the [Tor Expert Bundle](https://www.torproject.org/download/tor/) or Tor Browser is running on port `9050` (`tor.exe`).
+
+---
+
+### Option 2: Linux / Kali Linux / Debian
+
+```bash
+# Clone the repository
+git clone https://github.com/AIwolfie/Fenrir.git
+cd Fenrir
+
+# Run automated installer
+chmod +x install.sh
+./install.sh
+```
+
+---
+
+### Option 3: Docker Container [Zero Setup]
+
+```bash
+docker-compose up --build -d
+```
+> Navigate to `http://localhost:8000` to access the Cyber Command Dashboard.
 
 ---
 
 ## 🎮 Usage Guide
 
-### 🌐 Mode 1: Web Dashboard
-
-Launch the FastAPI dark-mode dashboard for point-and-click intelligence operations:
-
+### 🌐 Mode 1: Cyber Command Web UI
+Launch the reactive FastAPI dashboard:
 ```bash
-fenrir --web --port 8000
+fenrir --web
 ```
-*Navigate to `http://localhost:8000` to monitor live crawls, explore SQLite FTS5 search indexes, and trigger AI threat summaries.*
+*Or customize host and port:*
+```bash
+fenrir --web --host 0.0.0.0 --port 8000
+```
+Open `http://localhost:8000` in any browser to launch live crawlers, run FTS5 queries, and review AI threat summaries.
 
 ---
 
-### 💻 Mode 2: Interactive CLI Terminal
-
-Stay in the terminal with rich tables, color-coded outputs, and interactive prompts:
-
+### 💻 Mode 2: Interactive Terminal Wizard
+Launch the guided step-by-step console:
 ```bash
+fenrir
+```
+*Or explicitly with:*
+```bash
+fenrir --wizard
+# or classic menu
 fenrir --cli
 ```
 
 ---
 
-## ⚙️ Environment Configuration (`.env`)
+## ⚙️ Configuration (`.env`)
 
-Fenrir reads configurations from `.env` or system environment variables:
+Fenrir reads configuration from `.env` or system environment variables:
 
 | Variable | Default | Description |
 | :--- | :--- | :--- |
@@ -223,6 +221,7 @@ Fenrir reads configurations from `.env` or system environment variables:
 | `CRAWL_WORKERS` | `5` | Concurrent async coroutines for crawling |
 | `CRAWL_DEPTH` | `2` | Traversal depth limit for link graph discovery |
 | `CRAWL_DELAY` | `1.5` | Throttling delay between requests per worker (sec) |
+| `DB_PATH` | `storage/fenrir.db` | SQLite database file location |
 | `AI_PROVIDER` | `ollama` | Provider: `ollama`, `gemini`, `openai`, `anthropic`, `openrouter` |
 | `AI_MODEL` | `llama3` | Model identifier (e.g. `llama3`, `gemini-1.5-flash`, `gpt-4o`) |
 | `GEMINI_API_KEY` | `""` | Google Gemini API Key |
@@ -232,66 +231,41 @@ Fenrir reads configurations from `.env` or system environment variables:
 
 ---
 
-## 🧪 Testing
+## 🧪 Automated Testing
 
-Run the automated pytest test suite (covers AI heuristics, SQLite FTS5, regex extractors, plugins, reporters, and FastAPI endpoints):
+Verify all internal extractors, databases, and async routines:
 
 ```bash
 pytest -v
 ```
 
 ```text
-======================== 23 passed in 11.85s =======================
+============================= 23 passed in 11.85s =============================
 ```
 
 ---
 
-## ⚠️ Disclaimer & OPSEC Hygiene
+## ⚠️ OPSEC & Legal Disclaimer
 
 > [!WARNING]
-> This framework is developed strictly for **authorized security research, defensive threat intelligence, and educational OSINT exploration**. Interacting with arbitrary dark web services may carry legal and operational hazards depending on your jurisdiction. The authors and contributors assume no liability for misuse.
+> **Defensive & Research Notice:** Fenrir is engineered strictly for **authorized security research, defensive threat intelligence, incident response, and academic OSINT exploration**. Navigating the dark web carries legal and operational responsibilities. The authors and contributors assume no liability for misuse.
 > 
 > **Mandatory OPSEC Rules:**
-> 1. Always execute in dedicated virtualized sandbox environments.
-> 2. Verify Tor circuit status before commencing scraping.
-> 3. Never reuse personal credentials or clearnet identities.
+> 1. Execute only inside virtualized sandboxes or isolated containers.
+> 2. Always confirm Tor SOCKS5 circuit health before commencing operations.
+> 3. Never reuse real identities, credentials, or personal payment methods.
 
 ---
 
-## 🤝 Contributing
+## 🐺 Author & Support
 
-Contributions make open source goated! Feel free to submit PRs for new search engines, plugin extractors, or frontend features:
-
-1. Fork the repo (`git checkout -b feature/EpicPlugin`)
-2. Commit your upgrades (`git commit -m 'feat: Add Monero subaddress tracker'`)
-3. Push to your branch (`git push origin feature/EpicPlugin`)
-4. Open a Pull Request
-
----
-
-## 🌟 Support the Project
- 
- <div align="center">
-   <a href="https://github.com/AIwolfie/Fenrir/stargazers"><img src="https://img.shields.io/github/stars/AIwolfie/Fenrir?style=for-the-badge&logo=github&color=00f5d4&logoColor=black&label=Stars" alt="Stars"></a>
-   &nbsp;
-   <a href="https://github.com/AIwolfie/Fenrir/network/members"><img src="https://img.shields.io/github/forks/AIwolfie/Fenrir?style=for-the-badge&logo=git&color=a855f7&logoColor=white&label=Forks" alt="Forks"></a>
-   &nbsp;
-   <a href="https://github.com/AIwolfie/Fenrir/watchers"><img src="https://img.shields.io/github/watchers/AIwolfie/Fenrir?style=for-the-badge&logo=eye&color=38bdf8&logoColor=white&label=Watchers" alt="Watchers"></a>
- 
-   <br><br>
-   <b>Created & Maintained by <a href="https://github.com/AIwolfie">AIwolfie</a></b><br>
-   <i>If Fenrir helped your research, smash that ⭐ — it keeps the project alive and motivates new features!</i>
- </div>
-
----
-
-## 💖 Acknowledgements
-
-- The **Tor Project** for open-source anonymity networks.
-- The **FastAPI** and **Rich** ecosystems for making terminal and web tooling effortless.
+<div align="center">
+  <b>Designed, Engineered & Maintained by <a href="https://github.com/AIwolfie">AIwolfie</a></b><br><br>
+  <i>If Fenrir assists your threat intelligence workflow, give the repository a ⭐ to support future releases!</i>
+</div>
 
 ---
 
 ## 📝 License
 
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for terms.
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for complete terms.
